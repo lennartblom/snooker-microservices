@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -25,8 +26,8 @@ public class HighestBreakService {
         return breaks;
     }
 
-    public Break getHighestBreak() {
-        return this.breaks.stream().max(Comparator.comparing(Break::getBreakValue)).get();
+    public Optional<Break> getHighestBreak() {
+        return this.breaks.stream().max(Comparator.comparing(Break::getBreakValue));
     }
 
     public List<Break> getTop5Breaks() {
