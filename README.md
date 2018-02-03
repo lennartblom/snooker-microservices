@@ -18,11 +18,12 @@ Todos
 
 ## The infrastructure
 
-[[https://github.com/lennartblom/snooker-microservices/blob/master/00_documentation/infrastructure.jpg|alt=Infrastructure Overview]]
+![](00_documentation/infrastructure.jpg)
+
 
 ## The context map
 
-[[https://github.com/lennartblom/snooker-microservices/blob/master/00_documentation/context_map.jpg|alt=Context Map]]
+![](00_documentation/context_map.jpg)
 
 ## Project setup
 ### Project requirments
@@ -44,4 +45,5 @@ and using RabbitMQ within the SpringBoot appliction:
 
 ### Postman Environment
 To have an overview of the different service ports and addresses, you
-can find suitable .json files in the 01_postman_information directory.
+can find suitable .json files in the [01_postman_information](01_postman_files) directory.
+
