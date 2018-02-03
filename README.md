@@ -36,11 +36,28 @@ and using RabbitMQ within the SpringBoot appliction:
 - tcp 15672
 - tcp 5672
 
-### Postman information
+## Postman Testruns
 To have an overview of the different service ports and addresses, you
 can find suitable .json files in the [01_postman_information](01_postman_files) directory.
 
-# Todos
+![](00_documentation/postman_collection.jpg)
+
+The requests can also be run with the Postman Collection runner.
+
+![](00_documentation/postman_runner_configuration.jpg)
+
+A good way to simulate a break scenario and the resulted messaging
+outcome in the RabbitMQ dashboard.
+
+![](00_documentation/postman_runner_rabbit_dashboard.jpg)
+
+
+
+
+
+
+
+## Todos
 
 - [ ] Player Switched after Break Finished
 - [ ] Dynamic Player ID in Potted Ball Event
@@ -49,4 +66,6 @@ can find suitable .json files in the [01_postman_information](01_postman_files) 
 - [ ] Include Eureka/Zuul Service discovery
 - [ ] Persistent data in services
 - [ ] Services must be stateless
+
+
 
