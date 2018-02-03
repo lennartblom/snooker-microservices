@@ -20,8 +20,8 @@ like [lombok](https://projectlombok.org/) or
 
 ## Project setup
 ### Project requirments
-Additionally to a suitable IDE (IntelliJ IDEA) you'll need to install
-the Java SDK 8 + Gradle.
+Additionally to a suitable IDE (e.g. IntelliJ IDEA) you'll need to install
+the Java SDK 8 + Maven.
 
 ### RabbitMQ
 For providing a messaging infrastructure, you have to start the
