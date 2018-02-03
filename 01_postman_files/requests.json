@@ -1,0 +1,318 @@
+{
+	"info": {
+		"name": "Snooker Microservices",
+		"_postman_id": "bc0964c1-dbdd-f3d1-1ae6-6ab32310c30b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Game Information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Game Stats Service}}/game/info",
+					"host": [
+						"{{Game Stats Service}}"
+					],
+					"path": [
+						"game",
+						"info"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Potting Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Potting Service}}/stats/ballsPotted",
+					"host": [
+						"{{Potting Service}}"
+					],
+					"path": [
+						"stats",
+						"ballsPotted"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Current Game Score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{Scoring Service}}/score",
+					"host": [
+						"{{Scoring Service}}"
+					],
+					"path": [
+						"score"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Submit new Shot",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ballTypeToHit\": \"RED\",\n\t\"firstContact\": \"RED\",\n\t\"pottedBalls\": [\"RED\", \"RED\", \"RED\"]\n}"
+				},
+				"url": {
+					"raw": "{{Shot Service}}/shot",
+					"host": [
+						"{{Shot Service}}"
+					],
+					"path": [
+						"shot"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Break Simulation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ballTypeToHit\": \"RED\",\n\t\"firstContact\": \"BLACK\",\n\t\"pottedBalls\": []\n}"
+				},
+				"url": {
+					"raw": "{{Shot Service}}/shot",
+					"host": [
+						"{{Shot Service}}"
+					],
+					"path": [
+						"shot"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Break Shot Red - Potted Red",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ballTypeToHit\": \"RED\",\n\t\"firstContact\": \"RED\",\n\t\"pottedBalls\": [\"RED\"]\n}"
+				},
+				"url": {
+					"raw": "{{Break Service}}/break/shot",
+					"host": [
+						"{{Break Service}}"
+					],
+					"path": [
+						"break",
+						"shot"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Break Shot Blue - Potted Blue",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ballTypeToHit\": \"BLUE\",\n\t\"firstContact\": \"RED\",\n\t\"pottedBalls\": []\n}"
+				},
+				"url": {
+					"raw": "{{Break Service}}/break/shot",
+					"host": [
+						"{{Break Service}}"
+					],
+					"path": [
+						"break",
+						"shot"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Break Shot Red - Foul Black hit First",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ballTypeToHit\": \"BLUE\",\n\t\"firstContact\": \"BLACK\",\n\t\"pottedBalls\": []\n}"
+				},
+				"url": {
+					"raw": "{{Break Service}}/break/shot",
+					"host": [
+						"{{Break Service}}"
+					],
+					"path": [
+						"break",
+						"shot"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Break",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Break Service}}/break/reset",
+					"host": [
+						"{{Break Service}}"
+					],
+					"path": [
+						"break",
+						"reset"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "All Breaks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Highest Break Service}}/breaks",
+					"host": [
+						"{{Highest Break Service}}"
+					],
+					"path": [
+						"breaks"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Highest Break",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{Highest Break Service}}/breaks/highest",
+					"host": [
+						"{{Highest Break Service}}"
+					],
+					"path": [
+						"breaks",
+						"highest"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "802de987-5baf-47d3-82bc-732deb0830e4",
+			"key": "SCORING_SERVICE",
+			"value": "http://localhost:8083/",
+			"type": "text"
+		},
+		{
+			"id": "4bade5d2-d34a-4c77-b488-eaae86350a47",
+			"key": "POTTING_SERVICE",
+			"value": "http://localhost:8082/",
+			"type": "text"
+		},
+		{
+			"id": "02d8aa97-ac3d-4fb6-9fed-e72c8cce0487",
+			"key": "GAME_SERVICE",
+			"value": "http://localhost:8080/",
+			"type": "text"
+		}
+	]
+}
