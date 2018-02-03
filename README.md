@@ -1,4 +1,6 @@
 # Snooker Microservices
+[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/lennartblom/snooker-microservices)
+
 Project attempt for creating a microservices architecture implementing
 the rules of Snooker with SpringBoot based on Domain Driven Design.
 
